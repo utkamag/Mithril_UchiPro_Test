@@ -1,0 +1,1 @@
+export const Array = JSON.parse(localStorage.getItem("array"))
