@@ -8,7 +8,7 @@ export function MainView() {
     }
 
     function link2 () {
-        m.route.set('/all')
+        m.route.set('/add')
     }
 
 

@@ -45,7 +45,7 @@ export function AllTokens() {
                     padding: "10px",
                     "border-radius": "15px",
                     width: "max-content",
-                    backgroundColor: "gray",
+                    backgroundColor: "#C7D0CC",
                     margin: "0 auto"
                 }
             }, [
