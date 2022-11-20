@@ -3,11 +3,12 @@ import m from 'mithril';
 
 export function MainView() {
 
-    function link1 () {
+    function linkAll () {
         m.route.set('/all')
+        setTimeout(() => window.location.reload(), 300)
     }
 
-    function link2 () {
+    function linkAdd () {
         m.route.set('/add')
     }
 
@@ -20,7 +21,7 @@ export function MainView() {
                 justifyContent: "center",
                 textAlign: "center",
                 alignItems: "center",
-                "margin-top": "240px",
+                "margin-top": "200px",
                 cursor: "default"
             }}, [
             m("h1", {style: {color: "#2c3e50", padding: "18px", width: "100%"}}, `Mithril_UchiPro_Test`),
@@ -29,12 +30,12 @@ export function MainView() {
                     margin: "10px",
                     padding: "12px",
                     background: "white",
-                    cursor: "pointer"}, onclick:link1}, "Все токены"),
+                    cursor: "pointer"}, onclick:linkAll}, "Все токены"),
                 m("button[style=margin-top:10px, border-radius: 15px;]", {style: {
                         margin: "10px",
                         padding: "12px",
                         background: "white",
-                        cursor: "pointer"}, onclick:link2 }, "Добавить токены")
+                        cursor: "pointer"}, onclick:linkAdd }, "Добавить токены")
             ]),
         ])
     }

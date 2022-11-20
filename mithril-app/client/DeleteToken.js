@@ -10,6 +10,7 @@ export function DeleteToken() {
         await axios
             .delete(`https://vuekez.herokuapp.com/tokens/${url._id}`)
             .catch(error => console.log(error))
+        alert("Токен успешно удален!")
         m.route.set("/all")
     }
 
