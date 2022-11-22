@@ -29,14 +29,11 @@ export function AllTokens() {
     function view() {
         return m(".tokens__container", [
             m(".tokens__title", {onclick: linkToHomePage}, "Mithril_UchiPro_Test"),
-            m(".tokens__tokens", [
-                m(".tokens__list",
-                    [m(".tokens__subtitle", "Токены"), m("div", [m(TokenList)]),
-                    ]),
+            m("table", {class: "tokens__tokens"}, [
+                m(".token__list", {class: "token__list"},
+                    [m(".tokens__subtitle", "Токены"), m("td",{cellSpacing: "12px"}, [m(TokenList)])]),
                 m(".tokens__urls", [
-                    m(".tokens__urls-items", "Url"), m("div", [
-                        m(UrlList)
-                    ])
+                    m(".tokens__subtitle", "Url"), m("td", {cellSpacing: "12px"}, [m(UrlList)])
                 ]),
             ]),
         ])

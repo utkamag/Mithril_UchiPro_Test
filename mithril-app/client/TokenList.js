@@ -6,7 +6,7 @@ export function TokenList() {
     function view() {
 
         return AllDataArray.map((item, index) => {
-            return m(".list__token", item.token)
+            return m("tr", {class:"list__token"}, item.token)
         })
     }
 

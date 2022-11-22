@@ -12,9 +12,9 @@ export function UrlList() {
 
 
     function view() {
-        return Array.map((item, index) => {
-            return m(".url__list", {onclick: () => linkDeleteToken(index, item)}, [
-                item.url, m(".url__button", "☒")])
+        return AllDataArray.map((item, index) => {
+            return m("tr", {class: ".url__list", onclick: () => linkDeleteToken(index, item)}, [
+                item.url, m("span", {class: "url__button"}, "☒")])
         })
     }
 
