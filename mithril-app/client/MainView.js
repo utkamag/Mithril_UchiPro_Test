@@ -3,12 +3,12 @@ import m from 'mithril';
 
 export function MainView() {
 
-    function linkAll () {
+    function linkAllToken () {
         m.route.set('/all')
         setTimeout(() => window.location.reload(), 300)
     }
 
-    function linkAdd () {
+    function linkAddToken () {
         m.route.set('/add')
     }
 
@@ -16,8 +16,8 @@ export function MainView() {
         return m(".main__container", [
             m(".main__title", `Mithril_UchiPro_Test`),
             m(".main__buttons", [
-                m("button", {class:"main__button", onclick:linkAll}, "Все токены"),
-                m("button", {class:"main__button-second",onclick:linkAdd }, "Добавить токены")
+                m("button", {class:"main__button", onclick:linkAllToken}, "Все токены"),
+                m("button", {class:"main__button-second",onclick:linkAddToken }, "Добавить токены")
             ]),
         ])
     }

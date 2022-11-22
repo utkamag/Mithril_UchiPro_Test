@@ -1,1 +1,2 @@
-export const Array = JSON.parse(localStorage.getItem("array"))
+
+export const AllDataArray = JSON.parse( localStorage.getItem("array") );

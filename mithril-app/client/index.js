@@ -11,6 +11,7 @@ m.mount(document.body, MainView);
 m.route(document.body, "/", {
     "/": MainView,
     "/all": AllTokens,
-    "/delete": DeleteToken,
+    '/delete': DeleteToken,
     "/add": AddToken
 })
+

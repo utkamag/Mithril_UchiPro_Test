@@ -6,18 +6,19 @@ import axios from "axios";
 
 export function AllTokens() {
 
-    const getArray = async () => {
+
+    const getAllData = async () => {
         const response = await axios.get("https://vuekez.herokuapp.com/tokens")
         try {
             const data = response.data
-            console.log(data)
             localStorage.setItem("array", JSON.stringify(data))
         } catch (error) {
             console.log(error.response)
         }
     }
 
-    m.mount(getArray())
+
+    m.mount(getAllData())
 
 
     function linkToHomePage() {
@@ -33,8 +34,10 @@ export function AllTokens() {
                     [m(".tokens__subtitle", "Токены"), m("div", [m(TokenList)]),
                     ]),
                 m(".tokens__urls", [
-                    m(".tokens__urls-items", "Url"), m("div", [m(UrlList)])
-                    ]),
+                    m(".tokens__urls-items", "Url"), m("div", [
+                        m(UrlList)
+                    ])
+                ]),
             ]),
         ])
     }
