@@ -22,12 +22,12 @@ export function DeleteToken() {
 
 
     function view() {
-        return m(".container", {style:{display: "block", "text-align": "center"}}, [
-            m("h1", `Вы точно хотите удалить данный токен:`),
-            m("div", {style:{"font-size": "20px"}}, `Токен: ${url.token}`),
-            m("div", {style:{"font-size": "20px"}}, `URL: ${url.url}`),
-            m(".buttons", {style:{"margin-top": "15px"}}, [
-               m("button",  {style:{"margin-right": "7px"},onclick: () => deleteToken()}, "Удалить"),
+        return m(".delete__container", [
+            m(".delete__title", `Вы точно хотите удалить данный токен:`),
+            m(".delete__token", `Токен: ${url.token}`),
+            m(".delete__url", `URL: ${url.url}`),
+            m(".delete__buttons", [
+               m("button",  {class:"delete__button-delete",onclick: () => deleteToken()}, "Удалить"),
                m("button", {onclick: () => cancelToken()}, "Отмена")
             ])
         ])

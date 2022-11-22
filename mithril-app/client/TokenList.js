@@ -6,7 +6,7 @@ export function TokenList() {
     function view() {
 
         return Array.map((item, index) => {
-            return m("div", {style: {margin: "12px"}}, item.token)
+            return m(".list__token", item.token)
         })
     }
 

@@ -1,0 +1,166 @@
+/* MainView */
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+    cursor: default;
+}
+
+.main__title {
+    color: #2c3e50;
+    padding: 18px;
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.main__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.main__button {
+    margin: 10px;
+    padding: 12px;
+    background: white;
+    cursor: pointer;
+}
+
+.main__button-second {
+    margin: 10px;
+    padding: 12px;
+    background: white;
+    cursor: pointer;
+}
+
+/* AllTokens */
+
+.tokens__container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+    cursor: default;
+}
+
+.tokens__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tokens__tokens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    width: max-content;
+    background-color: #C7D0CC;
+    margin: 0 auto;
+}
+
+.tokens__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tokens__subtitle {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.tokens__url {
+    display: flex;
+    flex-direction: column;
+}
+
+.tokens__urls-items {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* AddToken */
+
+.add__container {
+    display: block;
+    text-align: center;
+}
+
+.add__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.add__input {
+    margin: 3px;
+}
+
+.add__buttons {
+    margin-top: 15px;
+}
+
+.add__buttons-add {
+    margin-right: 7px;
+}
+
+/* DeleteToken */
+
+.delete__container {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.delete__token {
+    font-size: 20px;
+}
+
+.delete__token {
+    font-size: 20px;
+}
+
+.delete__url {
+    font-size: 20px;
+}
+
+.delete__buttons {
+    margin-top: 15px;
+}
+
+.delete__button-delete {
+    margin-right: 7px;
+}
+
+/* TokenList */
+
+.list__token {
+    margin: 12px;
+}
+
+/* UrlList */
+
+.url__list {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.url__button {
+    justify-content: flex-end;
+    margin-left: 5px;
+    cursor: pointer;
+}

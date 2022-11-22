@@ -24,21 +24,20 @@ export function AddToken() {
     }
 
     function view() {
-        return m(".container", {style: {display: "block", "text-align": "center"}}, [
-            m("h1", "Вы хотите добавить?"),
-            m(".form", [
-
+        return m(".add__container", [
+            m(".add__title", "Вы хотите добавить?"),
+            m(".add__form", [
                 m("input", {
-                    style: {"margin": "3px"},
+                    class: "add__input",
                     type: "input",
                     placeholder: "Введите токен...",
                     id: 1,
                     required: "true"
                 }),
-                m("input", {placeholder: "Введите url...", type: "input", id: 2, required: "true"}),
-                m(".buttons", {style: {"margin-top": "15px"}}, [
+                m("input", {class: "add__input", placeholder: "Введите url...", type: "input", id: 2, required: "true"}),
+                m(".add__buttons", [
                     m("button", {
-                        style: {"margin-right": "7px"},
+                        class: "add__buttons-add",
                         value: "Добавить",
                         type: "submit",
                         onclick: () => AddToken()

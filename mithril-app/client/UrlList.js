@@ -13,16 +13,8 @@ export function UrlList() {
 
     function view() {
         return Array.map((item, index) => {
-            return m("div", {
-                style: {display: "flex", alignItems: "center", margin: "10px"},
-                onclick: () => linkDelete(index, item)
-            }, [item.url, m("div", {
-                style: {
-                    justifyContent: "flex-end",
-                    "margin-left": "5px",
-                    cursor: "pointer"
-                }
-            }, "☒")])
+            return m(".url__list", {onclick: () => linkDelete(index, item)}, [
+                item.url, m(".url__button", "☒")])
         })
     }
 
