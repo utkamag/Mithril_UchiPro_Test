@@ -2,6 +2,7 @@ import m from 'mithril'
 import {TokenList} from "./TokenList";
 import {UrlList} from "./UrlList";
 import axios from "axios";
+import {Preloader} from "./Preloader";
 
 
 export function AllTokens() {
@@ -20,6 +21,13 @@ export function AllTokens() {
 
     m.mount(getAllData())
 
+    // Подключаем preloader
+
+    window.onload = function preloader() {
+        let preloader = document.querySelector(".preloader")
+        setTimeout( () => preloader.style.display = 'none', 500)
+    }
+
 
     function linkToHomePage() {
         m.route.set('/')
@@ -27,17 +35,20 @@ export function AllTokens() {
 
 
     function view() {
+
         return m(".tokens__container", [
             m(".tokens__title", {onclick: linkToHomePage}, "Mithril_UchiPro_Test"),
             m("table", {class: "tokens__tokens"}, [
                 m(".token__list", {class: "token__list"},
-                    [m(".tokens__subtitle", "Токены"), m("td",{cellSpacing: "12px"}, [m(TokenList)])]),
+                    [m(".tokens__subtitle", "Токены"), m("td", {cellSpacing: "12px"}, [m(TokenList)])]),
                 m(".tokens__urls", [
                     m(".tokens__subtitle", "Url"), m("td", {cellSpacing: "12px"}, [m(UrlList)])
                 ]),
             ]),
+            m(Preloader)
         ])
     }
+
 
     return {view}
 }

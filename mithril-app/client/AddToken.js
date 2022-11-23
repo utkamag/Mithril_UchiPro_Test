@@ -12,7 +12,7 @@ export function AddToken() {
                     {"token": `${inputToken.value}`, "url": `${inputURL.value}`})
             alert("Данные успешно добавлены на сервер!")
             m.route.set("/all")
-            setTimeout(() => window.location.reload(), 500)
+            location.reload()
         }
         else {
             alert("Введие данные в поля Токен и URL")

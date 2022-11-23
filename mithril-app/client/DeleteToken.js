@@ -12,6 +12,7 @@ export function DeleteToken() {
             .catch(error => console.log(error))
         alert("Токен успешно удален!")
         m.route.set("/all")
+        location.reload()
     }
 
     function cancelToken() {
