@@ -1,3 +1,4 @@
+
 /* MainView */
 
 .main__container {
@@ -81,11 +82,6 @@
     flex-direction: column;
 }
 
-.tokens__urls-items {
-    font-weight: bold;
-    font-size: 17px;
-}
-
 /* AddToken */
 
 .add__container {
@@ -145,22 +141,35 @@
     margin-right: 7px;
 }
 
-/* TokenList */
-
-.list__token {
-    margin: 12px;
-}
-
 /* UrlList */
 
-.url__list {
-    display: flex;
-    align-items: center;
-    margin: 10px;
+.url__button-none {
+    visibility: hidden;
 }
 
-.url__button {
-    justify-content: flex-end;
-    margin-left: 5px;
-    cursor: pointer;
+/* Preloader */
+
+.preloader {
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
 }
+
+.preloader__text {
+    display: flex;
+    justify-content: center;
+    margin-top: 320px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.preloader__none {
+    display: none;
+}
+
+
