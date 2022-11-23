@@ -1,5 +1,5 @@
 import m from 'mithril'
-import axios from "axios";
+import {AxiosBaseUrl} from "./AxiosBaseUrl";
 
 export function AddToken() {
 
@@ -7,12 +7,12 @@ export function AddToken() {
         const inputToken = document.getElementById(1)
         const inputURL = document.getElementById(2)
         if(inputToken.value && inputURL.value) {
-            await axios
-                .post("https://vuekez.herokuapp.com/tokens",
+            await AxiosBaseUrl
+                .post("/tokens",
                     {"token": `${inputToken.value}`, "url": `${inputURL.value}`})
             alert("Данные успешно добавлены на сервер!")
             m.route.set("/all")
-            location.reload()
+            setTimeout(() => location.reload(), 500)
         }
         else {
             alert("Введие данные в поля Токен и URL")

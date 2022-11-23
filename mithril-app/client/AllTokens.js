@@ -1,15 +1,17 @@
 import m from 'mithril'
 import {TokenList} from "./TokenList";
 import {UrlList} from "./UrlList";
-import axios from "axios";
 import {Preloader} from "./Preloader";
+import {AxiosBaseUrl} from "./AxiosBaseUrl";
+
 
 
 export function AllTokens() {
 
 
+
     const getAllData = async () => {
-        const response = await axios.get("https://vuekez.herokuapp.com/tokens")
+        const response = await AxiosBaseUrl.get('tokens')
         try {
             const data = response.data
             localStorage.setItem("array", JSON.stringify(data))

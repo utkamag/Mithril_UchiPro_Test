@@ -1,5 +1,5 @@
 import m from 'mithril'
-import axios from "axios";
+import {AxiosBaseUrl} from "./AxiosBaseUrl";
 
 
 export function DeleteToken() {
@@ -7,17 +7,17 @@ export function DeleteToken() {
     const TokenID = JSON.parse(localStorage.getItem("url"));
 
     async function deleteToken() {
-        await axios
-            .delete(`https://vuekez.herokuapp.com/tokens/${TokenID._id}`)
+        await AxiosBaseUrl
+            .delete(`tokens/${TokenID._id}`)
             .catch(error => console.log(error))
         alert("Токен успешно удален!")
         m.route.set("/all")
-        location.reload()
+        setTimeout(() => location.reload(), 500)
     }
 
     function cancelToken() {
         m.route.set("/all")
-        location.reload()
+        setTimeout(() => location.reload(), 500)
     }
 
 

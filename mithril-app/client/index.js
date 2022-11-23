@@ -5,6 +5,7 @@ import { MainView } from './MainView';
 import {AllTokens} from "./AllTokens";
 import {DeleteToken} from "./DeleteToken";
 import {AddToken} from "./AddToken";
+import axios from "axios";
 
 m.mount(document.body, MainView);
 
@@ -14,4 +15,3 @@ m.route(document.body, "/", {
     '/delete': DeleteToken,
     "/add": AddToken
 })
-
