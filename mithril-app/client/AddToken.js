@@ -26,7 +26,7 @@ export function AddToken() {
     function view() {
         return m(".add__container", [
             m(".add__title", "Вы хотите добавить?"),
-            m(".add__form", [
+            m("form", {class: "add__form"}, [
                 m("input", {
                     class: "add__input",
                     type: "input",
