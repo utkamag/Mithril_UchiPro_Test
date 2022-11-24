@@ -5,10 +5,7 @@ import {Preloader} from "./Preloader";
 import {AxiosBaseUrl} from "./AxiosBaseUrl";
 
 
-
 export function AllTokens() {
-
-
 
     const getAllData = async () => {
         const response = await AxiosBaseUrl.get('tokens')
@@ -27,7 +24,7 @@ export function AllTokens() {
 
     window.onload = function preloader() {
         let preloader = document.querySelector(".preloader")
-        setTimeout( () => preloader.style.display = 'none', 500)
+        setTimeout(() => preloader.style.display = 'none', 500)
     }
 
 
